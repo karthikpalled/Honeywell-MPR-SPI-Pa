@@ -1,4 +1,4 @@
-#include "MPR.h"
+#include "MPR-PA.h"
 
 int pin1 = 10;
 int pin2 = 9;
