@@ -11,20 +11,15 @@
         - VCC Connected to 3.3V logic
         - Ground to Ground
         - Any additional sensors can connect SCL, MOSI, MISO, VCC, and Ground in Parallel to the first sensor. SS pin has to be unique.
-
-        Created May 7, 2021
-        By Omar Husain
-        MIT License
-
 */
 
-#ifndef MPR_h
-#define MPR_h
+#ifndef MPR-PA_h
+#define MPR-PA_h
 
 #include "Arduino.h"
 #include <SPI.h>
 
-class MPR {
+class MPR-PA {
 
 public:
     MPR(int pin);
@@ -46,4 +41,4 @@ private:
     const int SPI_CLOCK_SPEED = 800000; // SPI clock speed (From datasheet)
 };
 
-#endif // MPR_h
+#endif // MPR-PA_h
