@@ -12,13 +12,9 @@
         - Ground to Ground
         - Any additional sensors can connect SCL, MOSI, MISO, VCC, and Ground in Parallel to the first sensor. SS pin has to be unique.
 
-        Created May 7, 2021
-        By Omar Husain
-        MIT License
-
 */
 
-#include "MPR.h"
+#include "MPR-PA.h"
 
 /* Constructor for pressure sensor. Takes chip select (SS) pin as argument. */
 MPR::MPR(int pin)
@@ -101,5 +97,5 @@ void MPR::connectToSensor()
 /* Convert from raw 24-bit value from sensor to the PSI reading (datasheet section 8) */
 double MPR::transferFunction(uint32_t raw_value)
 {
-    return (((raw_value - _min_cnt) * (_max_psi - _min_psi)) / (_max_cnt - _min_cnt)) + _min_psi;
+    return (((raw_value - _min_cnt) * (_max_pa - _min_pa)) / (_max_cnt - _min_cnt)) + _min_pa;
 }
